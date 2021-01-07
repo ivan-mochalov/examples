@@ -7,49 +7,49 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ParenthesisSequenceTest {
 
-    private ParenthesisSequence checker;
+    private ParenthesisSequence target;
 
     @BeforeEach
-    public void setUp() {
-        checker = new ParenthesisSequence();
+    void setUp() {
+        target = new ParenthesisSequence();
     }
 
     @Test
-    public void givenBalancedOrdered_whenExecuted_thenResultTrue() {
-        final boolean balanced = checker.isBalanced("{}()[]");
+    void givenBalancedOrdered_whenExecuted_thenResultTrue() {
+        final boolean balanced = target.isBalanced("{}()[]");
 
         assertTrue(balanced);
     }
 
     @Test
-    public void givenBalancedIncluded_whenExecuted_thenResultTrue() {
-        final boolean balanced = checker.isBalanced("{([]())}");
+    void givenBalancedIncluded_whenExecuted_thenResultTrue() {
+        final boolean balanced = target.isBalanced("{([]())}");
 
         assertTrue(balanced);
     }
 
     @Test
-    public void givenOddString_whenExecuted_thenResultFalse() {
-        final boolean balanced = checker.isBalanced("{[]");
+    void givenOddString_whenExecuted_thenResultFalse() {
+        final boolean balanced = target.isBalanced("{[]");
 
         assertFalse(balanced);
     }
 
     @Test
-    public void givenNotBalanced_whenExecuted_thenResultFalse() {
-        final boolean balanced = checker.isBalanced("({[}])");
+    void givenNotBalanced_whenExecuted_thenResultFalse() {
+        final boolean balanced = target.isBalanced("({[}])");
 
         assertFalse(balanced);
     }
 
     @Test
-    public void givenNull_whenExecuted_thenExceptionOccurs() {
-        assertThrows(IllegalArgumentException.class, () -> checker.isBalanced(null));
+    void givenNull_whenExecuted_thenExceptionOccurs() {
+        assertThrows(IllegalArgumentException.class, () -> target.isBalanced(null));
     }
 
     @Test
-    public void givenEmpty_whenExecuted_thenResultTrue() {
-        final boolean balanced = checker.isBalanced("");
+    void givenEmpty_whenExecuted_thenResultTrue() {
+        final boolean balanced = target.isBalanced("");
 
         assertTrue(balanced);
     }
