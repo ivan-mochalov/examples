@@ -1,8 +1,3 @@
-/*
- * Найти дубликат в последовательности чисел.
- * Пример:
- *  - 1,2,3,4,5,3 -> 3
- */
 package examples.task;
 
 import java.util.HashMap;
