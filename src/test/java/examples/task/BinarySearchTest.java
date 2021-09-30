@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class BinarySearchWithShiftTest {
+class BinarySearchTest {
 
     @Test
     void givenArrayWithoutShift_whenSearchValue_thenValueFound() {
@@ -13,7 +13,7 @@ class BinarySearchWithShiftTest {
         int value = 8;
         int expectedValuePosition = 4;
 
-        int valuePosition = BinarySearchWithShift.search(array, value);
+        int valuePosition = BinarySearch.searchValueInShiftedArray(array, value);
 
         assertEquals(valuePosition, expectedValuePosition);
     }
@@ -23,7 +23,7 @@ class BinarySearchWithShiftTest {
         int[] array = new int[]{1, 2, 4, 6, 8, 10, 14, 16, 24, 45, 78, 89};
         int value = 99;
 
-        assertThrows(IllegalArgumentException.class, () -> BinarySearchWithShift.search(array, value));
+        assertThrows(IllegalArgumentException.class, () -> BinarySearch.searchValueInShiftedArray(array, value));
     }
 
     @Test
@@ -32,7 +32,7 @@ class BinarySearchWithShiftTest {
         int value = 2;
         int expectedValuePosition = 10;
 
-        int valuePosition = BinarySearchWithShift.search(array, value);
+        int valuePosition = BinarySearch.searchValueInShiftedArray(array, value);
 
         assertEquals(valuePosition, expectedValuePosition);
     }
@@ -43,7 +43,7 @@ class BinarySearchWithShiftTest {
         int value = 16;
         int expectedValuePosition = 4;
 
-        int valuePosition = BinarySearchWithShift.search(array, value);
+        int valuePosition = BinarySearch.searchValueInShiftedArray(array, value);
 
         assertEquals(valuePosition, expectedValuePosition);
     }
@@ -54,7 +54,7 @@ class BinarySearchWithShiftTest {
         int value = 45;
         int expectedValuePosition = 1;
 
-        int valuePosition = BinarySearchWithShift.search(array, value);
+        int valuePosition = BinarySearch.searchValueInShiftedArray(array, value);
 
         assertEquals(valuePosition, expectedValuePosition);
     }
@@ -65,7 +65,7 @@ class BinarySearchWithShiftTest {
         int value = 8;
         int expectedValuePosition = 8;
 
-        int valuePosition = BinarySearchWithShift.search(array, value);
+        int valuePosition = BinarySearch.searchValueInShiftedArray(array, value);
 
         assertEquals(valuePosition, expectedValuePosition);
     }
@@ -76,7 +76,7 @@ class BinarySearchWithShiftTest {
         int value = 2;
         int expectedValuePosition = 7;
 
-        int valuePosition = BinarySearchWithShift.search(array, value);
+        int valuePosition = BinarySearch.searchValueInShiftedArray(array, value);
 
         assertEquals(valuePosition, expectedValuePosition);
     }
@@ -87,7 +87,7 @@ class BinarySearchWithShiftTest {
         int value = 92;
         int expectedValuePosition = 5;
 
-        int valuePosition = BinarySearchWithShift.search(array, value);
+        int valuePosition = BinarySearch.searchValueInShiftedArray(array, value);
 
         assertEquals(valuePosition, expectedValuePosition);
     }
@@ -98,18 +98,18 @@ class BinarySearchWithShiftTest {
         int value = 1;
         int expectedValuePosition = 6;
 
-        int valuePosition = BinarySearchWithShift.search(array, value);
+        int valuePosition = BinarySearch.searchValueInShiftedArray(array, value);
 
         assertEquals(valuePosition, expectedValuePosition);
     }
 
     @Test
     void givenNullArray_whenSearchValue_thenExceptionOccurred() {
-        assertThrows(IllegalArgumentException.class, () -> BinarySearchWithShift.search(null, 0));
+        assertThrows(IllegalArgumentException.class, () -> BinarySearch.searchValueInShiftedArray(null, 0));
     }
 
     @Test
     void givenEmptyArray_whenSearchValue_thenExceptionOccurred() {
-        assertThrows(IllegalArgumentException.class, () -> BinarySearchWithShift.search(new int[0], 0));
+        assertThrows(IllegalArgumentException.class, () -> BinarySearch.searchValueInShiftedArray(new int[0], 0));
     }
 }
