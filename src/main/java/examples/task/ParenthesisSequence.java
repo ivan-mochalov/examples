@@ -35,6 +35,11 @@ public class ParenthesisSequence {
                     }
                 }
             }
+
+            if(!stack.isEmpty()) {
+                log.info("There are more opening brackets exists than expected!");
+                result = false;
+            }
         } else {
             log.info("The brackets count is not even!");
             result = false;

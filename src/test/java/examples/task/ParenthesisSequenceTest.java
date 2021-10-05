@@ -53,4 +53,11 @@ class ParenthesisSequenceTest {
 
         assertTrue(balanced);
     }
+
+    @Test
+    void givenBalancedOrderedWithMoreOpeningBrackets_whenExecuted_thenResultFalse() {
+        final boolean balanced = target.isBalanced("(({}()[]");
+
+        assertFalse(balanced);
+    }
 }
