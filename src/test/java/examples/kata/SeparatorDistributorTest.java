@@ -1,4 +1,4 @@
-package examples.task;
+package examples.kata;
 
 import org.junit.jupiter.api.Test;
 

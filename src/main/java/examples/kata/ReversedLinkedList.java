@@ -1,4 +1,4 @@
-package examples.task;
+package examples.kata;
 
 import lombok.AllArgsConstructor;
 import lombok.ToString;

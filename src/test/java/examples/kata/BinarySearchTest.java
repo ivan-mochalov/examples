@@ -1,8 +1,8 @@
-package examples.task;
+package examples.kata;
 
 import org.junit.jupiter.api.Test;
 
-import static examples.task.BinarySearch.searchValueInShiftedArray;
+import static examples.kata.BinarySearch.searchValueInShiftedArray;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 

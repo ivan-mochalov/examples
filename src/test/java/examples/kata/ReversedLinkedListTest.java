@@ -1,8 +1,8 @@
-package examples.task;
+package examples.kata;
 
 import org.junit.jupiter.api.Test;
 
-import static examples.task.ReversedLinkedList.reverse;
+import static examples.kata.ReversedLinkedList.reverse;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 

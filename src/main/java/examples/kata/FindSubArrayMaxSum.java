@@ -1,4 +1,4 @@
-package examples.task;
+package examples.kata;
 
 public class FindSubArrayMaxSum {
 

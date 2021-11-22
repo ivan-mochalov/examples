@@ -1,4 +1,4 @@
-package examples.task;
+package examples.kata;
 
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
