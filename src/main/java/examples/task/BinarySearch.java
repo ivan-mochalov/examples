@@ -25,6 +25,8 @@ public class BinarySearch {
     }
 
     private static void validateArray(int[] array) {
+        log.debug("Inserted array: {}", Arrays.toString(array));
+
         if (array == null || array.length == 0) {
             throw new IllegalArgumentException("Wrong input array!");
         }
@@ -49,7 +51,7 @@ public class BinarySearch {
             }
         }
 
-        log.debug("Output: {}", mid);
+        log.debug("Shift position is: {}", mid);
 
         return mid;
     }
@@ -57,8 +59,10 @@ public class BinarySearch {
     private static int findValueIndex(int[] array, int value, int lo, int hi) {
         log.debug("Input values: array: {}, value: {}, lo: {}, hi: {}", array, value, lo, hi);
 
+        int mid;
+
         while (lo <= hi) {
-            int mid = (hi - lo) / 2 + lo;
+            mid = (hi - lo) / 2 + lo;
 
             if (array[mid] > value) {
                 hi = mid - 1;
